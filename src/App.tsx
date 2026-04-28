@@ -5,11 +5,9 @@ import Housing from './pages/Housing'
 import Finances from './pages/Finances'
 import Handbook from './pages/Handbook'
 
-const basename = (import.meta as unknown as { env: { BASE_URL: string } }).env.BASE_URL
-
 function App() {
   return (
-    <BrowserRouter basename={basename}>
+    <BrowserRouter basename="/uoft-medicine-guide/">
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/post-acceptance" element={<PostAcceptance />} />
